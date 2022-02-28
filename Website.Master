@@ -1,0 +1,80 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Website.Master.cs" Inherits="Assignment_ArtSales_.Homepage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style2 {
+            width: 184px;
+        }
+        .auto-style4 {
+            width: 922px;
+        }
+        .auto-style5 {
+            height: 23px;
+            width: 922px;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                <table style="width: 100%;">
+                    <tr>
+                        <td class="auto-style2" rowspan="4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <asp:Menu ID="Menu1" runat="server">
+                                <Items>
+                                    <asp:MenuItem Text="Register/LogIn" Value="Register/LogIn"></asp:MenuItem>
+                                    <asp:MenuItem Text="Home" Value="Home"></asp:MenuItem>
+                                    <asp:MenuItem Text="Gallery" Value="Gallery"></asp:MenuItem>
+                                    <asp:MenuItem Text="WishList" Value="WishList"></asp:MenuItem>
+                                    <asp:MenuItem Text="Cart" Value="Cart"></asp:MenuItem>
+                                </Items>
+                            </asp:Menu>
+&nbsp;&nbsp; </td>
+                        <td class="auto-style4">
+                            <asp:HyperLink ID="HyperLink1" runat="server" Font-Bold="True" Font-Size="X-Large">FuckerArt</asp:HyperLink>
+                        </td>
+                        <td>Are having an Account?
+                            <asp:HyperLink ID="HyperLink2" runat="server">Register/Login</asp:HyperLink>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="auto-style5">&nbsp;</td>
+                        <td rowspan="4"></td>
+                    </tr>
+                    <tr>
+                        <td class="auto-style4">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td class="auto-style4">
+                            <asp:ContentPlaceHolder ID="Art" runat="server">
+                            </asp:ContentPlaceHolder>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="auto-style2">
+                            <asp:DataPager ID="DataPager1" runat="server">
+                                <Fields>
+                                    <asp:NextPreviousPagerField ButtonType="Button" ShowFirstPageButton="True" ShowNextPageButton="False" ShowPreviousPageButton="False" />
+                                    <asp:NumericPagerField />
+                                    <asp:NextPreviousPagerField ButtonType="Button" ShowLastPageButton="True" ShowNextPageButton="False" ShowPreviousPageButton="False" />
+                                </Fields>
+                            </asp:DataPager>
+                        </td>
+                        <td class="auto-style4">
+                            <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+                            </asp:ContentPlaceHolder>
+                        </td>
+                    </tr>
+                </table>
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>
